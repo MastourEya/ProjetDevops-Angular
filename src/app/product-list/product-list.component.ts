@@ -16,7 +16,7 @@ export class ProductListComponent {
   }
 
   fetchData() {
-    this.productService.fetchAllData().subscribe((response) => {
+    this.productService.fetchAllData().subscribe((response: ResponseType) => {
       this.data = response;
     });
   }
