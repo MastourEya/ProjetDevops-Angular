@@ -5,7 +5,7 @@ COPY package*.json ./
 RUN npm install --legacy-peer-deps
 # Copy the rest of your application files
 COPY . .
-RUN npm run build --prod
+RUN npm run build 
 
 FROM nginx:alpine
 COPY --from=node /app/dist/ /usr/share/nginx/html
