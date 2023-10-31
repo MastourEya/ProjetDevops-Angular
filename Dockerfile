@@ -3,7 +3,7 @@ WORKDIR /app
 # Copy the package.json and package-lock.json files
 COPY package*.json ./
 RUN npm cache clean --force
-RUN npm install
+RUN npm install --legacy-peer-deps
 # Copy the rest of your application files
 COPY . .
 RUN npm run build --prod
